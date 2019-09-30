@@ -1,11 +1,5 @@
 <h2>
     Welcome {{name}}
 </h2>
-<h2>{{name.length}}</h2>
-<h2>{{name.toUpperCase()}}</h2>
-<h2>{{greetUser()}}</h2>
-<input [id]="myId" type="text" value="Ummi">
-<h2 class="text-success">Ummi Nabilah</h2>
-<h2 [class]="successClass">Ummi Nabilah</h2>
-<h2 class="text-special">Ummi Nbailah</h2>
-<h2 [class.text-danger]="hasError">Ummi danger!!!!</h2>
+<button (click)="onClick()">Greet</button>
+<p>{{greeting}}</p>
