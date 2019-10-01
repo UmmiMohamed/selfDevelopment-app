@@ -7,20 +7,24 @@ import { Component, OnInit } from '@angular/core';
 })
 export class TestComponent implements OnInit {
 
-  public name = 'ummi';
-  public myId = 'testId';
-  public successClass = 'text-success';
-  public greeting: string;
-  public hasError = true;
+   public name: string;
+  // public myId = 'testId';
+  // public successClass = 'text-success';
+  // public greeting: string;
+  // public hasError = true;
 
   constructor() { }
 
   ngOnInit() {
   }
 
-onClick() {
-  console.log('Welcome to Codeevolution');
-  this.greeting = 'Welcome to Codevolution';
-}
+  // function called by front end (html) when button clicked
+// onClick() {
+//   this.greeting = 'Welcome User';
+// }
+
+// logMessage(value){
+//   console.log(value);
+// }
 
 }
