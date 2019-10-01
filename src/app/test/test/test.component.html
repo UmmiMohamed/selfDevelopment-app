@@ -1,4 +1,3 @@
-
 <!--OnClick
 <button (click)="onClick()">Greet</button>
 <p>{{greeting}}</p>-->
@@ -9,5 +8,17 @@
 
 <!--two way binding-->
 
-<input [(ngModel)]="name" type="text">
+<!-- <input [(ngModel)]="name" type="text">
 {{name}}
+<button (click)="onClick()">Click</button>
+{{greeting}} -->
+
+<div [ngSwitch]="color">
+    <div *ngSwitchCase="'red'">You picked red color</div>
+    <div *ngSwitchCase="'blue'">You picked blue color</div>
+    <div *ngSwitchDefault>Pick Again</div>
+</div>
+
+<div *ngFor="let color of colors; index as i">
+    <h2>{{i}} {{color}}</h2>
+</div>
