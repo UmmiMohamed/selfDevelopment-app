@@ -40,14 +40,14 @@
 </ng-template>
 
 <div [ngSwitch]="userAs">
-<div *ngSwitchCase="'Developer'">
-    <p>Welcome Developer</p>
-</div>
+    <div *ngSwitchCase="'Developer'">
+        <p>Welcome Developer</p>
+    </div>
 
-<div>{{"Welcome" + parentData}}</div>
-<div *ngSwitchCase="'Tester'">
-    <p>Welcome Tester</p>
-</div>
+    <div>{{"Welcome" + parentData}}</div>
+    <div *ngSwitchCase="'Tester'">
+        <p>Welcome Tester</p>
+    </div>
 </div>
 
 <table>
@@ -104,11 +104,11 @@
     <h2>YOUR DETAILS ARE AS BELOW:</h2>
     <tr>
         <p>First Name:</p>
-        <td>{{myname}}</td>
+        <td>{{myname | uppercase}}</td>
     </tr>
     <tr>
         <p>Last Name:</p>
-        <td>{{mylastName}}</td>
+        <td>{{mylastName | uppercase}}</td>
     </tr>
     <tr>
         <p>Age:</p>
@@ -121,6 +121,10 @@
     <tr>
         <p>Phone Number:</p>
         <td>{{phoneNumber}}</td>
+    </tr>
+    <tr>
+        <p>Register Date:</p>
+        <td>{{date | date:'short'}}</td>
     </tr>
 </div>
 

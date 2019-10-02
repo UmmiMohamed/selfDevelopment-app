@@ -15,6 +15,8 @@ export class TestComponent implements OnInit {
   displayInstruction = true;
   gender: string;
   userAs = 'Developer';
+
+  public date = new Date();
   // public myId = 'testId';
   // public successClass = 'text-success';
 
@@ -42,8 +44,8 @@ export class TestComponent implements OnInit {
   //   console.log(this.greeting);
   // }
 
-  welcomeUser(name: string, lastName: string) {
-    this.myname = name;
+  welcomeUser(firstName: string, lastName: string) {
+    this.myname = firstName;
     this.mylastName = lastName;
   }
 
@@ -54,6 +56,4 @@ export class TestComponent implements OnInit {
   // Save() {
   //   console.log(this.name);
   // }
-
-
 }
