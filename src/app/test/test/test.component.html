@@ -13,7 +13,9 @@
 <button (click)="onClick()">Click</button>
 {{greeting}} -->
 
-<div [ngSwitch]="color">
+<!--ngFor directive-->
+
+<!-- <div [ngSwitch]="color">
     <div *ngSwitchCase="'red'">You picked red color</div>
     <div *ngSwitchCase="'blue'">You picked blue color</div>
     <div *ngSwitchDefault>Pick Again</div>
@@ -21,4 +23,77 @@
 
 <div *ngFor="let color of colors; index as i">
     <h2>{{i}} {{color}}</h2>
+</div> -->
+
+<!--Component interaction-->
+
+<!-- <h2>{{"Hello " + parentData}}</h2>
+<button (click)="fireEvent()">Send Event</button> -->
+
+<!-- Exercise 1: Do registration form-->
+
+<div *ngIf="displayInstruction; else elseBlock">
+    PLEASE ENTER YOUR DETAILS BELOW!
+</div>
+<ng-template #elseBlock>
+    <p>Instruction hidden</p>
+</ng-template>
+
+<table>
+    <tr>
+        <td>
+            <h2>First Name:</h2>
+        </td>
+        <td><input type="text" #firstName></td>
+    </tr>
+    <tr>
+        <td>
+            <h2>Last Name:</h2>
+        </td>
+        <td><input type="text" #lastName></td>
+    </tr>
+    <tr>
+        <td>
+            <h2>Age:</h2>
+        </td>
+        <td><input type="number" [(ngModel)]="age"></td>
+    </tr>
+    <tr>
+        <td>
+            <h2>Phone Number:</h2>
+        </td>
+        <td><input type="number" [(ngModel)]="phoneNumber"></td>
+    </tr>
+    <tr>
+        <td>
+            <h2>Address:</h2>
+        </td>
+        <td><input type="text"></td>
+    </tr>
+    <tr>
+        <td></td>
+        <td>
+            <button (click)="welcomeUser(firstName.value, lastName.value)">Register</button>
+    </tr>
+
+</table>
+
+<div>
+    <h2>YOUR DETAILS ARE AS BELOW:</h2>
+    <tr>
+        <p>First Name:</p>
+        <td>{{myname}}</td>
+    </tr>
+    <tr>
+        <p>Last Name:</p>
+        <td>{{mylastName}}</td>
+    </tr>
+    <tr>
+        <p>Age:</p>
+        <td>{{age}}</td>
+    </tr>
+    <tr>
+        <p>Phone Number:</p>
+        <td>{{phoneNumber}}</td>
+    </tr>
 </div>

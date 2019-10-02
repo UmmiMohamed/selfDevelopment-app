@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
   selector: 'app-test',
@@ -7,31 +7,44 @@ import { Component, OnInit } from '@angular/core';
 })
 export class TestComponent implements OnInit {
 
-  // public name: string;
+  public myname: string;
+  public mylastName: string;
+  displayInstruction = true;
   // public myId = 'testId';
   // public successClass = 'text-success';
- public greeting: string;
- public color = 'blue';
- public colors = ['red', 'blue', 'green', 'yellow'];
+
+  // ngFor directive
+  //  public greeting: string;
+  //  public color = 'blue';
+  //  public colors: string[];
+
+
   // public hasError = true;
+
+  // component interaction
 
   constructor() { }
 
   ngOnInit() {
+
+    // ngFor directive
+    // this.colors = ['yellow', 'red', 'blue', 'black'];
   }
 
   // function called by front end (html) when button clicked
-// onClick() {
-//   this.greeting = 'Welcome User';
-//   console.log(this.greeting);
-// }
+  // onClick() {
+  //   this.greeting = 'Welcome User';
+  //   console.log(this.greeting);
+  // }
 
-// logMessage(value){
-//   console.log(value);
-// }
+  welcomeUser(name: string, lastName: string) {
+    this.myname = name;
+    this.mylastName = lastName;
+  }
 
-// Save() {
-//   console.log(this.name);
-// }
+  // Save() {
+  //   console.log(this.name);
+  // }
+
 
 }

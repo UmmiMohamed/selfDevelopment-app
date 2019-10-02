@@ -6,5 +6,6 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'selfDevelopment-app';
+  title = 'Registration Form'; // displayed to app.component.html
+  // public name = 'UMMI';
 }
