@@ -7,6 +7,8 @@ import { Component, OnInit, Input } from '@angular/core';
 })
 export class TestComponent implements OnInit {
 
+  @Input() public parentData;
+
   public myname: string;
   public mylastName: string;
   displayInstruction = true;
