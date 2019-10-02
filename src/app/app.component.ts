@@ -8,4 +8,5 @@ import { Component } from '@angular/core';
 export class AppComponent {
   title = 'Registration Form'; // displayed to app.component.html
   public name = 'UMMI';
+  public message: string;
 }

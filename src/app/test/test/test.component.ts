@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, EventEmitter, Output } from '@angular/core';
 
 @Component({
   selector: 'app-test',
@@ -8,6 +8,7 @@ import { Component, OnInit, Input } from '@angular/core';
 export class TestComponent implements OnInit {
 
   @Input() public parentData;
+  @Output() public childEvent = new EventEmitter();
 
   public myname: string;
   public mylastName: string;
@@ -44,6 +45,10 @@ export class TestComponent implements OnInit {
   welcomeUser(name: string, lastName: string) {
     this.myname = name;
     this.mylastName = lastName;
+  }
+
+  fireEvent(){
+    this.childEvent.emit('Hey ' + this.myname);
   }
 
   // Save() {
