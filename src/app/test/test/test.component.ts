@@ -10,7 +10,8 @@ export class TestComponent implements OnInit {
   public myname: string;
   public mylastName: string;
   displayInstruction = true;
-    gender: string;
+  gender: string;
+  userAs = 'Developer';
   // public myId = 'testId';
   // public successClass = 'text-success';
 

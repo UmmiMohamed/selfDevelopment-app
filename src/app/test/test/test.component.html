@@ -39,6 +39,15 @@
     <p>Instruction hidden</p>
 </ng-template>
 
+<div [ngSwitch]="userAs">
+<div *ngSwitchCase="'Developer'">
+    <p>Welcome Developer</p>
+</div>
+<div *ngSwitchCase="'Tester'">
+    <p>Welcome Tester</p>
+</div>
+</div>
+
 <table>
     <tr>
         <td>
@@ -64,8 +73,8 @@
         </td>
         <td>
             <p>
-                <input type="radio" value="male" name="gender" [(ngModel)]="radioValue"> Male
-                <input type="radio" value="female" name="gender" [(ngModel)]="radioValue"> Female
+                <input type="radio" value="Male" name="gender" [(ngModel)]="radioValue"> Male
+                <input type="radio" value="Female" name="gender" [(ngModel)]="radioValue"> Female
             </p>
         </td>
     </tr>
