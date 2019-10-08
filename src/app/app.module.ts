@@ -8,6 +8,8 @@ import { TestComponent } from './test/test/test.component';
 import { EmployeeComponent } from './test/employee/employee.component';
 import { EmployeeListComponent } from './test/employee/employee-list/employee-list.component';
 import { EmployeeDetailComponent } from './test/employee/employee-detail/employee-detail.component';
+import { HttpClientModule } from '@angular/common/http';
+import { EmployeeService } from './employee.service';
 
 @NgModule({
   declarations: [
@@ -20,9 +22,10 @@ import { EmployeeDetailComponent } from './test/employee/employee-detail/employe
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    HttpClientModule
   ],
-  providers: [],
+  providers: [EmployeeService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
