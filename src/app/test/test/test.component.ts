@@ -49,7 +49,7 @@ export class TestComponent implements OnInit {
     this.mylastName = lastName;
   }
 
-  fireEvent(){
+  fireEvent() {
     this.childEvent.emit('Hey ' + this.myname);
   }
 
