@@ -1,4 +1,3 @@
-
 <!-- <app-test></app-test> -->
 
 <!--Component Interaction-->
@@ -8,4 +7,13 @@
 <app-test (childEvent)="message=$event" [parentData]="name"></app-test>
 {{message}}
 
-<app-employee></app-employee>
+<div>
+    <h1>Routing and navigation</h1>
+</div>
+<nav>
+    <a [routerLink]="['/registration']" routerLinkActive="active">Registration </a>
+    <a [routerLink]="['/departments']" routerLinkActive="active">Departments </a>
+    <a [routerLink]="['/employees']" routerLinkActive="active">Employees </a>
+    <a [routerLink]="['/employee']" routerLinkActive="active">EmployeeList & Details </a>
+</nav>
+<app-routing-example></app-routing-example>
