@@ -9,6 +9,8 @@ import { EmployeeService } from 'src/app/employee.service';
 export class EmployeeDetailComponent implements OnInit {
 
   public employees = [];
+  public errorMsg: any;
+
   // public employees = [
   //   {id: 1, name: 'Andrew', age: '30'},
   //   {id: 2, name: 'Brandon', age: '25'},
@@ -22,6 +24,7 @@ export class EmployeeDetailComponent implements OnInit {
 
   ngOnInit() {
     this.employeeService.getEmployees()
-      .subscribe(data => this.employees = data);
+    .subscribe(data => this.employees = data,
+              error => this.errorMsg = error);
   }
 }
