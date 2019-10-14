@@ -23,7 +23,10 @@ const routes: Routes = [
   exports: [RouterModule]
 })
 export class AppRoutingModule { }
-export const routingComponents = [DepartmentListComponent,
+export const routingComponents =
+[
+  DepartmentListComponent,
   EmployeesListComponent,
   PageNotFoundComponent,
-  DepartmentDetailComponent];
+  DepartmentDetailComponent
+];

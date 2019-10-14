@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-department-detail',
@@ -7,9 +8,19 @@ import { Component, OnInit } from '@angular/core';
 })
 export class DepartmentDetailComponent implements OnInit {
 
-  constructor() { }
+  public departmentId;
+  public departmentName;
+
+  constructor(
+    private route: ActivatedRoute
+  ) { }
 
   ngOnInit() {
+    const id = parseInt(this.route.snapshot.paramMap.get('id'));
+    this.departmentId = id;
+
+    const name = this.route.snapshot.paramMap.get('name');
+    this.departmentName = name;
   }
 
 }
