@@ -14,6 +14,7 @@ import { RoutingExampleComponent } from './test/routing-example/routing-example.
 import { DepartmentListComponent } from './test/routing-example/department-list/department-list.component';
 import { EmployeesListComponent } from './test/routing-example/employees-list/employees-list.component';
 import { PageNotFoundComponent } from './test/routing-example/page-not-found/page-not-found.component';
+import { DepartmentDetailComponent } from './test/routing-example/department-detail/department-detail.component';
 
 @NgModule({
   declarations: [
@@ -26,7 +27,8 @@ import { PageNotFoundComponent } from './test/routing-example/page-not-found/pag
     DepartmentListComponent,
     EmployeesListComponent,
     routingComponents,
-    PageNotFoundComponent
+    PageNotFoundComponent,
+    DepartmentDetailComponent
   ],
   imports: [
     BrowserModule,
