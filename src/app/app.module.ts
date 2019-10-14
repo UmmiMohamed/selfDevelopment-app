@@ -13,6 +13,7 @@ import { EmployeeService } from './employee.service';
 import { RoutingExampleComponent } from './test/routing-example/routing-example.component';
 import { DepartmentListComponent } from './test/routing-example/department-list/department-list.component';
 import { EmployeesListComponent } from './test/routing-example/employees-list/employees-list.component';
+import { PageNotFoundComponent } from './test/routing-example/page-not-found/page-not-found.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,8 @@ import { EmployeesListComponent } from './test/routing-example/employees-list/em
     RoutingExampleComponent,
     DepartmentListComponent,
     EmployeesListComponent,
-    routingComponents
+    routingComponents,
+    PageNotFoundComponent
   ],
   imports: [
     BrowserModule,
