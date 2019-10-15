@@ -6,12 +6,20 @@ import { EmployeeComponent } from './test/employee/employee.component';
 import { TestComponent } from './test/test/test.component';
 import { PageNotFoundComponent } from './test/routing-example/page-not-found/page-not-found.component';
 import { DepartmentDetailComponent } from './test/routing-example/department-detail/department-detail.component';
+import { DepartmentOverviewComponent } from './test/routing-example/department-overview/department-overview.component';
+import { DepartmentContactComponent } from './test/routing-example/department-contact/department-contact.component';
 
 
 const routes: Routes = [
-  { path: '', redirectTo: '/department-list', pathMatch: 'full' },
-  { path: 'department-list', component: DepartmentListComponent },
-  { path: 'department-list/:id', component: DepartmentDetailComponent },
+  { path: '', redirectTo: '/departments', pathMatch: 'full' },
+  { path: 'departments', component: DepartmentListComponent },
+  {
+    path: 'departments/:id', component: DepartmentDetailComponent,
+    children: [
+      { path: 'overview', component: DepartmentOverviewComponent},
+      { path: 'contact', component: DepartmentContactComponent}
+    ]
+  },
   { path: 'employees', component: EmployeesListComponent },
   { path: 'employee', component: EmployeeComponent },
   { path: 'registration', component: TestComponent },
@@ -28,5 +36,7 @@ export const routingComponents =
   DepartmentListComponent,
   EmployeesListComponent,
   PageNotFoundComponent,
-  DepartmentDetailComponent
+  DepartmentDetailComponent,
+  DepartmentContactComponent,
+  DepartmentOverviewComponent
 ];

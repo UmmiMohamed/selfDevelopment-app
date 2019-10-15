@@ -26,12 +26,12 @@ export class DepartmentDetailComponent implements OnInit {
 
   goPrevious() {
     let previousId = this.departmentId - 1;
-    this.router.navigate(['/department-list', previousId]);
+    this.router.navigate(['/department', previousId]);
   }
 
   goNext() {
     let nextId = this.departmentId + 1;
-    this.router.navigate(['/department-list', nextId]);
+    this.router.navigate(['/department', nextId]);
   }
 
   gotoDepartments() {
@@ -40,6 +40,14 @@ export class DepartmentDetailComponent implements OnInit {
     // this.router.navigate(['/department-list', {id: selectedId}]);
     // when click back button, it goes back to previous page and id: selectedId means the url will still remain to the selected id.
     this.router.navigate(['../', {id: selectedId}], {relativeTo: this.route} );
+  }
+
+  showOverview() {
+    this.router.navigate(['overview'], {relativeTo: this.route});
+  }
+
+  showContact() {
+    this.router.navigate(['contact'], {relativeTo: this.route});
   }
 
 }
