@@ -22,3 +22,8 @@ ul li {
   ul li:hover {
     background-color: #eee;
   }
+
+.items li.selected {
+  background-color: black;
+  color: white;
+}

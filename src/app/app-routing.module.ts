@@ -9,9 +9,9 @@ import { DepartmentDetailComponent } from './test/routing-example/department-det
 
 
 const routes: Routes = [
-  { path: '', redirectTo: '/departments', pathMatch: 'full' },
-  { path: 'departments', component: DepartmentListComponent },
-  { path: 'departments/:id', component: DepartmentDetailComponent },
+  { path: '', redirectTo: '/department-list', pathMatch: 'full' },
+  { path: 'department-list', component: DepartmentListComponent },
+  { path: 'department-list/:id', component: DepartmentDetailComponent },
   { path: 'employees', component: EmployeesListComponent },
   { path: 'employee', component: EmployeeComponent },
   { path: 'registration', component: TestComponent },
