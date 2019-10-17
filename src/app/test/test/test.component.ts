@@ -7,8 +7,7 @@ import { Component, OnInit, Input, EventEmitter, Output } from '@angular/core';
 })
 export class TestComponent implements OnInit {
 
-  @Input() public parentData;
-  @Output() public childEvent = new EventEmitter();
+  // @Input() public parentData;
 
   public myname: string;
   public mylastName: string;
@@ -49,9 +48,9 @@ export class TestComponent implements OnInit {
     this.mylastName = lastName;
   }
 
-  fireEvent() {
-    this.childEvent.emit('Hey ' + this.myname);
-  }
+  // fireEvent() {
+  //   this.childEvent.emit('Hey ' + this.myname);
+  // }
 
   // Save() {
   //   console.log(this.name);
