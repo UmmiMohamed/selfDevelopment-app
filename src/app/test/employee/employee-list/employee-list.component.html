@@ -1,5 +1,13 @@
 
 <p>Employee List</p>
+<!-- ng for directive -->
 <ul *ngFor="let employee of employees">
     <li>{{employee.name}}</li>
 </ul>
+
+<!-- ng switch directive -->
+
+<div [ngSwitch] = "firstEmployee" >
+    <div *ngSwitchCase = "'Andrew'">You picked Andrew</div>
+    <div *ngSwitchCase = "'Brandon'">You picked Brandon</div>
+</div>
