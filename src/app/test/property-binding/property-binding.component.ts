@@ -27,10 +27,9 @@ export class PropertyBindingComponent implements OnInit {
   }
 
   toggleDisable() {
-    let testbutton = <HTMLInputElement> document.getElementById('testbutton');
+    const testbutton = document.getElementById('testbutton') as HTMLInputElement;
     testbutton.disabled = !testbutton.disabled;
     console.log('button disabled');
-    
   }
 
 }
