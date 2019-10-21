@@ -22,4 +22,15 @@ export class PropertyBindingComponent implements OnInit {
     console.log('DOM property value: ' + this.bindingInput.nativeElement.value);
   }
 
+  test() {
+    console.log('Test button works!');
+  }
+
+  toggleDisable() {
+    let testbutton = <HTMLInputElement> document.getElementById('testbutton');
+    testbutton.disabled = !testbutton.disabled;
+    console.log('button disabled');
+    
+  }
+
 }

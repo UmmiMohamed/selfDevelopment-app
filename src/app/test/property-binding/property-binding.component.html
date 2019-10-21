@@ -1,6 +1,7 @@
 <h1>property-binding</h1>
 
 <!--input initialize to Ummi-->
+<h4>EXAMPLE 1: HTML Attribute and DOM property</h4>
 <input type="text" value="Ummi" #bindingInput>
 <div>
     <button (click)="getHTMLAttributeValue()">Get HTML attribute value</button>
@@ -8,3 +9,9 @@
 <div>
     <button (click)="getDOMPropertyValue()">Get DOM property</button>
 </div>
+
+<h4>EXAMPLE 2: a disabled button</h4>
+<p>Disable test button when click toggle button</p>
+
+<button id = "testbutton" (click)="test()">TEST</button>
+<button (click) = "toggleDisable()">TOGGLE DISABLE TEST BUTTON</button>
