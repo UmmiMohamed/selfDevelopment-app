@@ -17,6 +17,7 @@ import { PageNotFoundComponent } from './test/routing-example/page-not-found/pag
 import { DepartmentDetailComponent } from './test/routing-example/department-detail/department-detail.component';
 import { DepartmentOverviewComponent } from './test/routing-example/department-overview/department-overview.component';
 import { DepartmentContactComponent } from './test/routing-example/department-contact/department-contact.component';
+import { PropertyBindingComponent } from './test/property-binding/property-binding.component';
 
 @NgModule({
   declarations: [
@@ -32,7 +33,8 @@ import { DepartmentContactComponent } from './test/routing-example/department-co
     PageNotFoundComponent,
     DepartmentDetailComponent,
     DepartmentOverviewComponent,
-    DepartmentContactComponent
+    DepartmentContactComponent,
+    PropertyBindingComponent
   ],
   imports: [
     BrowserModule,
